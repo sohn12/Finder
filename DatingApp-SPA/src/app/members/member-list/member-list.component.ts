@@ -31,7 +31,6 @@ export class MemberListComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.users = data["users"].result;
       this.pagination = data["users"].pagination;
-      console.log("pagination: " + this.pagination);
     });
     this.userParams.gender = this.user.gender === "female" ? "male" : "female";
     this.userParams.minAge = 18;
